@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Practico Laboratorio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="verProductos()">
+    <script src="header.js"></script>
+    <main>
+      <div class="buscar">
+        <h1>Buscar Producto</h1>
+        <input type="text" name="busqueda" id="busqueda"  placeholder="Nombre del producto"/>
+        <button onclick="buscar()">Buscar</button>
+      </div>
+      <div class="tablaprincipal">
+        <table>
+            <tr>
+              <th>Fecha</th>
+              <th>Título</th>
+              <th>Precio Pesos</th>
+              <th>Precio Dólares</th>
+              <th>Editar</th>
+              <th>Eliminar</th>
+            </tr>
+            <tbody id="muestreo"></tbody>
+          </table>
+        </div>
+        <dialog id="formularioEditar">
+          <form action="#">
+            <input type="text" name="id" id="id" disabled />
+            <input type="text" name="nombre" id="tituloProductoEditado" placeholder="Título del producto" />
+            <input type="number" name="precioPeso" id="precioPesoEditado" placeholder="Precio en pesos" />
+            <input type="number" name="precioDolar" id="precioDolarEditado" placeholder="Precio en dólares" />
+            <input type="date" name="fecha" id="fechaEditada" placeholder="Fecha" />
+          </form>
+          <button type="submit" id="guardarCambios" onclick="editarProducto()">Guardar cambios</button>
+          <button onclick="cerrarDialog('formularioEditar')">Salir</button>
+        </dialog>
+  
+        <dialog id="dialogEliminar">
+          <p>¿Seguro que queres eliminar este producto?</p>
+          <p id="idEliminar"></p>
+  
+          <div class="opciones">
+            <button onclick="eliminarProducto()" class="eliminar">Si</button>
+            <button onclick="cerrarDialog('dialogEliminar')" class="no-eliminar">
+              No
+            </button>
+          </div>
+        </dialog>
+      <div class="footer">
+        <script src="footer.js"></script>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

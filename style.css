@@ -1,0 +1,180 @@
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    display: flex;
+    min-height: auto;
+    justify-content: space-between;
+    background-color: #aef7ba;
+    align-items: center;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.nombreTienda{
+    display: flex;
+    align-items: center;
+} 
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+nav a:hover{
+    color: white;
+}
+
+
+@media (max-width:650px){
+    header{
+        flex-direction: column;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+
+    .footer{
+        display: none;
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    padding: auto;
+    right: 0;
+    width: 100%;
+    color: black;
+    text-align: center;
+    background-color: #b6eeb9;
+    height: auto;
+    align-items: center;
+}
+main{
+    text-align: center;
+
+}
+
+.tablaPrincipal table{
+    table-layout: auto;
+    border-collapse: collapse;
+}
+
+th{
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    text-transform: capitalize;
+}
+td{
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    text-transform: capitalize;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    text-transform: capitalize;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.buscar input{
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+button {
+    background-color: rgb(113, 155, 113);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+}
+button :hover{
+    background-color:rgb(1, 49, 1) ;
+}
+
+.editar {
+    background-color: #15fc47;
+}
+
+.eliminar {
+    background-color: hsl(120, 69%, 15%);
+}
+
+.editar:hover{
+    text-decoration: underline;
+}
+
+.eliminar:hover {
+    text-decoration: underline;
+}
+
+.inputsAgregar {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inputsAgregar form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.inputsAgregar input {
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.inputsAgregar button {
+    background-color: rgb(113, 155, 113);
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+dialog form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+dialog button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+
+
